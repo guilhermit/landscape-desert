@@ -1,0 +1,53 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+@keyframes shine-stars
+	from
+		background-color: rgba($star-color, .15)
+	to
+		background-color: $star-color
+	
+@keyframes wind-plant1
+	from
+		@include transform(scale(.7) skewX(-1deg) translateX(5px))
+		transition: transform 1s ease-in-out
+	to
+		@include transform(scale(.7) skewX(0) translateX(0))
+		transition: transform 1s ease-in-out
+
+@keyframes wind-plant2
+	from
+		@include transform(scale(.3) skewX(-1deg) translateX(5px))
+		transition: transform 1s ease-in-out
+	to
+		@include transform(scale(.3) skewX(0) translateX(0))
+		transition: transform 1s ease-in-out
+	
+@keyframes wind-plant3
+	from
+		@include transform(scale(.5) skewX(-1deg) translateX(5px))
+		transition: transform 1s ease-in-out
+	to
+		@include transform(scale(.5) skewX(0) translateX(0))
+		transition: transform 1s ease-in-out
+
+@keyframes tumbleweed-spin
+	from
+		@include transform(rotate(0))
+	to
+		@include transform(rotate(360deg))
+
+@keyframes tumbleweed-move
+	0%
+		left: -220px
+		top: 470px
+	10%
+		top: 470px
+	30%
+		top: 490px
+	31%
+		top: 490px
+	36%
+		top: 480px
+	100%
+		left: 1800px 

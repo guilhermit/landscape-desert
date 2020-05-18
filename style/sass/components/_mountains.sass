@@ -1,0 +1,80 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.mountains
+	position: relative
+	top: 150px
+	z-index: 1000
+
+	.m-parts
+		position: absolute
+		@include gradient($plane3-color, lighten($plane3-color, 7))
+
+.mountain1
+	@extend .mountains	
+
+	.part1
+		@extend .m-parts
+		@include set-part(50px, 250px, null, null, 0 5px 0 0)
+
+	.part2
+		@extend .m-parts
+		@include set-part(30px, 230px, 20px, 50px, 0 3px 0 0)
+
+	.part3
+		@extend .m-parts
+		@include set-part(30px, 220px, 30px, 80px, 0 10px 0 0)
+
+	.part4
+		@extend .m-parts
+
+
+.mountain2
+	@extend .mountains
+
+	.part1
+		@extend .m-parts
+		@include set-part(25px, 161px, 49px, 354px, 0 5px 0 0)
+
+	.part2
+		@extend .m-parts
+		@include set-part(15px, 175px, 34px, 342px, 5px 5px 0 0)
+
+	.part3
+		@extend .m-parts
+		@include set-part(10px, 125px, 85px, 378px, 0 5px 0 0)
+
+	.part4
+		@extend .m-parts
+		@include set-part(20px, 114px, 98px, 326px, 5px 0 0 0)
+		@include transform(rotate(1deg))
+
+	.part5
+		@extend .m-parts
+		@include set-part(15px, 80px, 128px, 387px)
+
+.mountain3
+	@extend .mountains
+	left: 454px
+	top: 268px
+
+	.part1
+		@extend .m-parts
+		@include set-part(100px, 100px, null, 30px, 30% 25% 0 0)
+
+	.part2
+		@extend .m-parts
+		@include set-part(15px, 100px, 25px, 10px, 5px 5px 0 0)
+
+
+.mountain4
+	@extend .mountains
+	z-index: 10
+
+	.part1
+		@extend .m-parts
+		@include set-part(30px, 40px, 153px, 235px, 5px 5px 0 0)
+
+	.part2
+		@extend .m-parts
+		@include set-part(10px, 40px, 146px, 266px)

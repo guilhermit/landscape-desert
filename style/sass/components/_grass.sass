@@ -1,0 +1,52 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.grass
+	position: relative
+	z-index: 10000
+
+	&.grass1
+		top: 414px
+		left: 365px
+		animation: wind-plant1 ease 1.5s infinite alternate
+
+		&::after
+			content: ""
+			position: absolute
+			@include set-part(35px, 70px, 62px, -12px, 0 0 5px 5px)
+			@include blur(10px)
+			background-color: rgba(0, 0, 0, .08)
+
+	&.grass2
+		top: 342px
+		left: 128px
+
+	&.grass3
+		top: 375px
+		left: -186px
+
+	&.type2
+		@include transform(scale(.3))
+
+		& > .g-parts
+			background-color: $plane2-color
+
+	.g-parts
+		position: absolute
+		background-color: $plant-color
+
+	.part1
+		@extend .g-parts
+		@include set-part(8px, 60px, null, null, 4px 4px 0 0)
+
+	.part2
+		@extend .g-parts
+		@include set-part(7px, 40px, 25px, -10px, 4px 4px 0 0)
+	
+	.part3
+		@extend .g-parts
+		@include set-part(7px, 50px, 10px, 11px, 4px 4px 0 0)
+
+	.part4
+		@extend .g-parts
+		@include set-part(5px, 30px, 33px, 21px, 4px 4px 0 0)

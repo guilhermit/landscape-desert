@@ -1,0 +1,24 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.sun
+	position: relative
+	z-index: 10
+
+	.sun-parts
+		position: absolute
+		left: 180px
+
+	.part1
+		@extend .sun-parts
+		@include set-part($sun-size, $sun-size, 180px, 180px, 50%)
+		@include gradient($sun-top-color, $sun-bottom-color)
+		@include box-shadow(0, -1px, 42px, 6px, #ea929d)
+
+	.part2
+		@extend .sun-parts
+		@include calc(width, $sun-size * 1.5)
+		@include calc(height, $sun-size * 1.5)
+		@include set-part(null, null, 140px, 144px, 50%)
+		@include blur(5px)
+		background-color: rgba(255, 255, 255, .1)

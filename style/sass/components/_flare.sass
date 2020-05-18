@@ -1,0 +1,28 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.lens-flare
+	position: relative
+	z-index: 10000000
+	top: 231px
+	left: 333px
+
+	.lens-parts
+		position: absolute
+		border-radius: 50%
+
+	.part1
+		@extend .lens-parts
+		@include set-part(25px, 25px, -20px, null)
+		background-color: rgba($sun-top-color, .09)
+
+	.part2
+		@extend .lens-parts
+		@include set-part(15px, 15px, 17px, 43px)
+		background-color: rgba($sun-top-color, .08)
+
+	.part3
+		@extend .lens-parts
+		@include set-part(60px, 60px, 43px, 73px)
+		background-color: rgba($sun-top-color, .01)
+		border: 1px solid rgba($sun-top-color, .035)

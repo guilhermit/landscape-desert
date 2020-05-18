@@ -1,0 +1,75 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.plane1
+	position: relative
+	left: 0
+	z-index: 10000
+
+	.p1-parts
+		position: absolute
+		background-color: $plane1-color
+
+	.part1
+		@extend .p1-parts
+		@include set-part(120%, 200px, 450px, -65px, 40% 80% 0 0)
+
+	.part2
+		@extend .p1-parts
+		@include set-part(70%, 200px, 445px, 306px, 70% 0% 0 0)
+		@include transform(rotate(10deg))
+
+.plane2
+	position: relative
+	left: 0
+	z-index: 1000
+
+	.p2-parts
+		position: absolute
+		background-color: $plane2-color
+
+	.part1
+		@extend .p2-parts
+		@include set-part(1000px, 600px, 335px, -303px, 80% 0 0 0)
+		@include transform(rotate(5deg))
+
+	.part2
+		@extend .p2-parts
+		@include set-part(600px, 600px, 335px, -303px, 80% 0 0 0)
+		@include transform(rotate(20deg))
+
+
+.plane3
+	position: relative
+	left: 0
+
+	.p3-parts
+		position: absolute
+		@include gradient($plane3-color, lighten($plane3-color, 8))
+		z-index: 100
+
+	.part1
+		@extend .p3-parts
+		@include set-part(200px, 50px, 333px, 44px, 0 5px 0 0)
+		@include transform(rotate(20deg))
+
+	.part2
+		@extend .p3-parts
+		@include set-part(200px, 100px, 325px, 54px, 50px 0 0 0)
+		@include transform(rotate(10deg))
+		z-index: 100
+
+	.part3
+		@extend .p3-parts
+		@include set-part(200px, 100px, 343px, 200px)
+
+	.part4
+		@extend .p3-parts
+		@include set-part(300px, 100px, 342px, 105px, 50%)
+		@include transform(rotate(-20deg))
+		z-index: 100
+
+	.part5
+		@extend .p3-parts
+		@include set-part(280px, 50px, 347px, 327px)
+		@include transform(rotate(-2deg))

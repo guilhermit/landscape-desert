@@ -1,0 +1,90 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.tumbleweed
+	position: relative
+	z-index: 100000
+	@include set-part(65px, 65px, null, 470px)
+	animation: tumbleweed-spin linear 3.8s infinite, tumbleweed-move linear 30s infinite
+
+	.tw-parts
+		position: absolute
+		background-color: $tumbleweed-color
+
+	.color2
+		background-color: lighten($tumbleweed-color, 5) !important
+
+	.part1
+		@extend .tw-parts
+		@include set-part(65px, 65px, null, null, 50%)
+
+	.part2
+		@extend .tw-parts
+		@include set-part(3px, 10px, 16px, 14px)
+		@include transform(rotate(29deg))
+
+	.part3
+		@extend .tw-parts
+		@include set-part(3px, 8px, 6px, 43px)
+		@include transform(rotate(-54deg))
+
+	.part4
+		@extend .tw-parts
+		@include set-part(3px, 12px, 41px, 14px)
+		@include transform(rotate(143deg))
+
+	.part5
+		@extend .tw-parts
+		@include set-part(3px, 8px, 47px, 42px)
+		@include transform(rotate(57deg))
+
+	.part6
+		@extend .tw-parts
+		@include set-part(3px, 10px, 29px, 53px)
+		@include transform(rotate(-28deg))
+
+	.part7
+		@extend .tw-parts
+		@include set-part(3px, 10px, 18px, 35px)
+		@include transform(rotate(67deg))
+
+	.part8
+		@extend .tw-parts
+		@include set-part(3px, 10px, 34px, 29px)
+		@include transform(rotate(-61deg))
+
+	.part9
+		@extend .tw-parts
+		@include set-part(2px, 10px, -6px, 29px)
+		@include transform(rotate(110deg))
+
+	.part10
+		@extend .tw-parts
+		@include set-part(2px, 10px, 45px, 60px)
+		@include transform(rotate(64deg))
+
+	.part11
+		@extend .tw-parts
+		@include set-part(2px, 10px, 49px, 6px)
+		@include transform(rotate(117deg))
+
+	.part12
+		@extend .tw-parts
+		@include set-part(2px, 12px, 15px, null)
+		@include transform(rotate(2deg))
+
+	.part13
+		@extend .tw-parts
+		@include set-part(2px, 10px, 9px, 60px)
+		@include transform(rotate(-13deg))
+
+	.part14
+		@extend .tw-parts
+		@include set-part(2px, 10px, 60px, 38px)
+		@include transform(rotate(-78deg))
+
+.tumbleweed-shadow
+	@extend .tumbleweed
+	background-color: rgba(0, 0, 0, .15)
+	@include border-radius(40%)
+	@include blur(10px)

@@ -1,0 +1,54 @@
+// Landscape Collection | MIT License
+// Copyright (C) 2020 Guilherme Oliveira
+
+.cacti
+	position: relative
+	z-index: 10000
+
+	&.cactus1
+		animation: wind-plant1 ease 2s infinite alternate
+		top: 340px
+		left: -2px
+
+	&.cactus2
+		animation: wind-plant2 ease 6s infinite alternate
+		top: 341px
+		left: 28px
+
+	&.cactus3
+		animation: wind-plant3 ease 4s infinite alternate
+		top: 341px
+		left: 379px
+
+	.cact-parts
+		position: absolute
+		background-color: $plant-color
+
+	.part1
+		@extend .cact-parts
+		@include set-part(30px, 180px, null, null, 10px 10px 0 1px)
+
+		&::before
+			content: ""
+			position: absolute
+			@include set-part(30px, 150px, 171px)
+			@include blur(15px)
+			background-color: rgba(0, 0, 0, .13)
+
+	.part2
+		@extend .cact-parts
+		@include set-part(50px, 20px, 60px, 10px)
+		@include transform(rotate(-10deg))
+
+	.part3
+		@extend .cact-parts
+		@include set-part(20px, 50px, 27px, 45px, 15px)
+
+	.part4
+		@extend .cact-parts
+		@include set-part(30px, 20px, 90px, -20px)
+
+	.part5
+		@extend .cact-parts
+		@include set-part(20px, 80px, 30px, -30px, 15px)
+		@include transform(rotate(-1deg))
